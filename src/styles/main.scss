@@ -1,0 +1,108 @@
+@use 'variaveis';
+@use 'hero';
+@use 'resume';
+@use 'members';
+@use 'discography';
+@use 'footer';
+@use 'header';
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../../assets/fonts/Ubuntu-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../../assets/fonts/Ubuntu-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url(../../assets/fonts/Ubuntu-Light.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Londrina Solid';
+    src: url(../../assets/fonts/LondrinaSolid-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Londrina Solid';
+    src: url(../../assets/fonts/LondrinaSolid-Black.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Londrina Solid';
+    src: url(../../assets/fonts/LondrinaSolid-Light.ttf);
+    font-weight: 100;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+    background-color: variaveis.$corDeFundoHero;
+    font-family: Ubuntu;
+    color: variaveis.$corTextoPrimario;
+}
+
+.title--big {
+    font-family: 'Londrina Solid';
+    font-weight: 400;
+    font-size: 100px;
+    color: variaveis.$corBotaoPrimario;
+
+    @media (max-width: 768px) {
+        font-size: 3em;
+    }
+}
+
+.title {
+    font-size: 40px;
+    letter-spacing: 9px;
+    transition: ease .5s;
+}
+
+.title--small {
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.title--header {
+    font-size: 40px;
+    letter-spacing: 9px;
+    transition: ease .5s;
+}
+
+.image--header {
+    padding: 10px;
+    max-width: 100px;
+    margin-left: 20px;
+    transition: ease .5s;
+}
+
+
+.button {
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+    color: variaveis.$corDeFundo;
+    padding: 10px 30px;
+    background-color: variaveis.$corBotaoPrimario;
+    border-radius: 5px;
+    transition: ease .4s;
+
+    @media (max-width: 768px) {
+        font-size: 10px;
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,72 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    display: flex;
+    left: 0;
+    top: 0;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    background-color:lighten(variaveis.$corDeFundoHero, 5);
+    transition: background-color .5s linear;
+    z-index: 1;
+
+    &--is-hidden {
+        background-color: transparent;
+        transition: opacity .5s linear;
+        transition: background-color .5s linear;
+
+        .image--header, .title--header {
+                opacity: 0;
+                visibility: hidden;
+                transition: linear .5s;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .title--header {
+            padding: 0 40px;
+            font-size: 30px;
+            letter-spacing: 4px;
+        }
+
+        .image--header {
+            max-width: 100px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .title--header {
+            padding: 0 20px;
+            font-size: 12px;
+            letter-spacing: 4px;
+        }
+
+        .image--header {
+            max-width: 75px;
+        }
+    }
+
+    .button {
+        padding: 10px;
+        margin-top: 20px;
+        margin-right: 30px;
+        margin-bottom: 20px;
+        font-size: medium;
+        background-color: variaveis.$corTextoPrimario;
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+            padding: 4px 8px;
+            margin: 0;
+            margin-right: 10px;
+        }
+
+            &:hover {
+                background-color: lighten(variaveis.$corDeFundo, 10);
+                color: variaveis.$corBotaoPrimario;
+            }
+    }
+}

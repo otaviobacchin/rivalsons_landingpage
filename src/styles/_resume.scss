@@ -1,0 +1,81 @@
+@use 'variaveis';
+
+.resume {
+    padding: 5.6vw;
+    text-align: center;
+    background-image: linear-gradient(variaveis.$corDeFundo 80%, variaveis.$corDeFundoHero);
+    height: 100%;
+    background-size: cover;
+
+    &__content {
+        
+        h2 {
+            margin-bottom: 100px;
+
+            @media screen and (min-width: 768px) and (max-width: 1024px) {
+                margin-bottom: 50px;
+                margin-top: 50px;
+            }
+
+            @media (max-width: 768px) {
+                margin-bottom: 50px;
+                margin-top: 50px;
+            }
+        }
+
+        &__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            list-style: none;
+            align-items: center;
+
+            
+            @media (max-width: 768px) {
+                display: block;
+            }
+
+            &__item {
+                font-size: 26px;
+                font-weight: 300;
+                
+                @media screen and (min-width: 768px) and (max-width: 1024px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 16px;
+                }
+
+                p {
+                    margin-bottom: 60px;
+                    padding: 0 70px;
+                    text-justify: auto;
+
+                    @media screen and (min-width: 768px) and (max-width: 1024px) {
+                        padding: 0 20px;
+                        margin-top: 30px;
+                    }
+
+                    @media (max-width: 768px) {
+                        padding: 0 20px;
+                        margin-top: 30px;
+                    }
+                }
+                
+
+                img {
+                    max-width: 70%;
+                    border: 6px double variaveis.$corBotaoPrimario;
+
+                    @media screen and (min-width: 768px) and (max-width: 1024px) {
+                        max-height: 100%;
+                    }
+
+                    @media (max-width: 768px) {
+                        max-width: 80%;
+                    }
+                }
+            }
+        }
+    }
+}
